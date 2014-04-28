@@ -21,6 +21,19 @@
         });
     }]);
 
+    resolveApp.run(['$rootScope', function($rootScope) {
+        var start;
+        $rootScope.$on('$routeChangeStart', function() {
+            start = Date.now();
+            console.log('routeChangeStart');
+        });
+
+        $rootScope.$on('$routeChangeSuccess', function() {
+            console.log('routeChangeSuccess');
+            console.log('routeChangeDuration : ' + (Date.now() - start) + 'ms');
+        })
+    }]);
+
     resolveApp.controller('Resolve', ['$scope', 'Content', function($scope, Content) {
         var start =  Date.now();
         $scope.content = Content;
