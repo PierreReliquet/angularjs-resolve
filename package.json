@@ -1,0 +1,14 @@
+{
+  "name": "angularjs-resolve",
+  "version": "0.0.1",
+  "description": "A simple project with node.js and angular to show how to use the resolve property on the routing system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pierre Reliquet",
+  "license": "Apache 2",
+  "dependencies": {
+    "express": "^4.1.1"
+  }
+}
